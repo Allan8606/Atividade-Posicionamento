@@ -3,9 +3,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     display: grid;
-    gap: 60px;
+    gap: 3.75rem;
     justify-items: center;
-    margin-top: 60px;
+    margin-top: 3.75rem;
 }
 
 a {
@@ -20,21 +20,38 @@ h3 {
 }
 
 p {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    justify-items: center;
+    gap: 3.75rem;
 }
 
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
 }
 
 .menu a {
+    display: block;
     background: #ffff;
-    padding: 15px 30px;
-    border-radius: 4px;
+    padding: 0.9375rem 1.875rem;
+    border-radius: 0.25rem;
     color: black;
+    border: #fff 2px solid;
+}
+.menu a:hover {
+    border: #e21 2px solid;
 }
 
 .bicicleta {
@@ -42,26 +59,42 @@ p {
     display: block;
 }
 
+.bicicleta::before {
+    content: "";
+
+    width: 3.75rem;
+    height: 0.25rem;
+    background: #e21;
+    position: absolute;
+    top: 1.875rem;
+    right: -1.875rem;
+}
+
 .conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
+    max-width: 62.5rem;
 }
 
 .introducao {
     background: #ffff;
-    padding: 40px;
+    padding: 2.5rem;
     text-align: right;
     position: relative;
     display: grid;
-    gap: 20px;
+    gap: 1.25rem;
     align-content: center;
     justify-items: end;
 }
 
-span {
-    width: 60px;
-    height: 4px;
+.introducao h1 {
+    font-size: 2rem;
+}
+
+.introducao::before {
+    content: "";
+    width: 3.75rem;
+    height: 0.25rem;
     background: #e21;
     position: absolute;
     top: 30px;
@@ -71,29 +104,41 @@ span {
 .introducao a {
     background: #e21;
     color: white;
-    padding: 15px 30px;
-    border-radius: 4px;
+    padding: 0.9375rem 1.875rem;
+    border-radius: 0.25;
+    border-radius: 0.1875rem;
+}
+
+.introducao a:hover {
+    background: #900;
 }
 
 h2 {
-    font-size: 64px;
+    font-size: 4rem;
     grid-column: 1;
     color: rgba(0, 0, 0, 0.2);
     text-align: right;
-    padding: 40px;
+    padding: 2.5rem;
     align-self: center;
+    background-image: url(./img/onda.svg);
 }
 
 .vantagens {
     background: white;
-    padding: 40px;
+    padding: 2.5rem;
 }
 
 .vantagens-item {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 10px 20px;
-    padding: 20px;
+    gap: 0.625rem 1.25rem;
+    padding: 1.25rem;
+}
+.vantagens-item:hover {
+    border-left: 0.25rem solid #e21;
+}
+.vantagens-item:nth-child(odd) {
+    background: #f7f7f7;
 }
 
 .vantagens-item p {
@@ -105,5 +150,5 @@ h2 {
     width: 100%;
     text-align: center;
     background: #fff;
-    padding: 40px;
+    padding: 2.5rem;
 }
